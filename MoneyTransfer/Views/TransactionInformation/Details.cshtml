@@ -1,12 +1,22 @@
 ﻿@model TransactionInformationDto
 
+@{
+    ViewData["Title"] = "Transaction Details";
+}
+
 <div class="container" style="margin-top:100px">
     <div class="card px-4 py-3">
         <div class="row">
             <center>
-                <h2 class="alert alert-success p-2">
-                    <i class="bi bi-check-square"></i> Transaction Details
+                <h2 class="alert alert-info p-2">
+                    <i class="bi bi-info-circle"></i> Transaction Details
                 </h2>
+            </center>
+
+            <center>
+                <h4 class="text-success p-2">
+                    <i class="bi bi-check-circle-fill"></i> Money has transfer successfully
+                </h4>
             </center>
 
             <div class="col-md-4 justify-content-between mt-5 mb-5 p-2">
@@ -35,7 +45,7 @@
                     <label class="p-1"><b>Country :</b> @Model.ReceiverDetails.Country</label>
                     <br />
 
-                    <label class="p-1"><b>Address :</b> @Model.ReceiverDetails.Address</label> 
+                    <label class="p-1"><b>Address :</b> @Model.ReceiverDetails.Address</label>
                     <br />
 
                 }
@@ -61,7 +71,7 @@
                     <br />
                 }
             </div>
-            <center><a asp-controller="Home" asp-action="Index" class="btn btn-outline-success">Home</a></center>
+            <center><a asp-controller="Home" asp-action="Index" class="btn btn-outline-success">Go To Home</a></center>
         </div>
     </div>
 </div>
