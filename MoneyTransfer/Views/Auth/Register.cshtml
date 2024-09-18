@@ -1,0 +1,82 @@
+﻿@model RegisterDto
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/views/shared/_LoginSignupLayout.cshtml";
+}
+
+
+<div class="registration-form">
+    <form asp-action="Register" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-icon">
+            <span><i class="bi bi-person-circle"></i></span>
+        </div>
+        <div class="form-group">
+            <input asp-for="FirstName" class="form-control item" placeholder="First Name" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input asp-for="MiddleName" class="form-control item" placeholder="Middle Name" />
+        </div>
+
+        <div class="form-group">
+            <input asp-for="LastName" class="form-control item" placeholder="Last Name" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <select asp-for="Gender" class="form-control item">
+                <option value="">Choose a Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input asp-for="Email" class="form-control item" placeholder="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input asp-for="Password" class="form-control item" placeholder="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input asp-for="ConfirmPassword" class="form-control item" placeholder="Confirm Password" />
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <select asp-for="Country" class="form-control item" rows="2" asp-items="@Model.countryList">
+                <option value="">Choose a Country</option>
+            </select>
+            <span asp-validation-for="Country" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <textarea asp-for="Address" class="form-control item" placeholder="Address" rows="2"></textarea>
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+
+
+        <div class="row">
+            <div class="col-7 mt-4">
+                <a asp-action="Login" class="text-decoration-none float-start mt-2">Have an account?</a>
+            </div>
+            <div class="col-5">
+                <input type="submit" value="Register" class="btn btn-block create-account float-end" />
+            </div>
+        </div>
+    </form>
+</div>
+
+@section scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

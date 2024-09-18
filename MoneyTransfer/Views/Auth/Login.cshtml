@@ -1,0 +1,47 @@
+﻿@model LoginDto
+
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/views/shared/_LoginSignupLayout.cshtml";
+}
+
+<div class="registration-form" style="margin-top:150px;" >
+    <form asp-action="Login" method="post" style="max-width: 430px">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-icon">
+            <span><i class="bi bi-person-circle"></i></span>
+        </div>
+        <div class="form-group">
+            <input  asp-for="Email" class="form-control item" placeholder="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input asp-for="Password" class="form-control item" placeholder="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-group form-check mt-2">
+            <label class="form-check-label">
+                <input asp-for="RememberMe" class="form-check-input" />@Html.DisplayNameFor(a => a.RememberMe)
+            </label>
+        </div>
+
+        <div class="row">
+            <input hidden asp-for="ReturnUrl" value="@Model.ReturnUrl"/>
+            <div class="col-7 mt-4">
+                <a asp-action="Register" class="text-decoration-none float-start mt-2" style="width:max-content">Don't have an account?</a>
+            </div>
+            <div class="col-5">
+                <input type="submit" value="Login" class="btn btn-block create-account float-end" />
+            </div>
+        </div>
+    </form>
+</div>
+
+@section scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

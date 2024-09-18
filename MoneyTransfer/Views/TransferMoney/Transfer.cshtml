@@ -1,0 +1,108 @@
+﻿@model TransactionInformationDto
+
+@{
+    ViewData["Title"] = "Transfer Money";
+}
+
+<div class="container" style="margin-top:100px">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="card col-md-8">
+            <div class="px-3 py-3">
+                <center> <h4 class="alert alert-warning p-1">Transaction Information</h4></center>
+                    <center>
+                    <b>
+                        @(Model.PaymentDetails!.Unit+" "+Model.PaymentDetails!.Transfer_Currency_Type + " : " + Model.PaymentDetails.Exchange_Rate + " " + Model.PaymentDetails.Payout_Currency_Type)
+                    </b><br />
+
+                    @if (Model.PaymentDetails!.Transfer_Amount > 1)
+                    {
+                        <b>@(Model.PaymentDetails!.Transfer_Amount + " " + Model.PaymentDetails!.Transfer_Currency_Type + " : " + (Model.PaymentDetails!.Transfer_Amount * Model.PaymentDetails.Exchange_Rate) + " " + Model.PaymentDetails.Payout_Currency_Type)</b>
+
+                        <br />
+                    }
+                    </center>
+                
+
+                <div class="d-flex justify-content-between mt-5 mb-5">
+                    <label class="alert alert-info p-2">Transfer Amount : <b>@(Model.PaymentDetails!.Transfer_Amount + " " + Model.PaymentDetails.Transfer_Currency_Type)</b></label>
+                    <label> <i class="bi bi-arrow-left-right" style="color:green;font-size:25px;"></i></label>
+                    <label class="alert alert-info p-2">Payout Amount : <b>@(Model.PaymentDetails.Payout_Amount + " " + Model.PaymentDetails.Payout_Currency_Type)</b></label>
+                </div>
+
+                <form asp-controller="TransferMoney" asp-action="CreateTransaction" method="post">
+
+                    <input hidden asp-for="PaymentDetails!.Exchange_Rate" value="@Model.PaymentDetails.Exchange_Rate" />
+                    <input hidden asp-for="PaymentDetails!.Transfer_Currency_Type" value="@Model.PaymentDetails.Transfer_Currency_Type" />
+                    <input hidden asp-for="PaymentDetails!.Transfer_Amount" value="@Model.PaymentDetails.Transfer_Amount" />
+                    <input hidden asp-for="PaymentDetails!.Payout_Currency_Type" value="@Model.PaymentDetails.Payout_Currency_Type" />
+                    <input hidden asp-for="PaymentDetails!.Payout_Amount" value="@Model.PaymentDetails.Payout_Amount" />
+
+                    <div class="card p-2 mb-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <center><h4 class="alert alert-secondary p-1 text-black">Receiver Details</h4></center>
+                            </div>
+
+                            <div class="col-md-4 mt-3 mb-2">
+                                <label class="text-black required">First Name</label>
+                                <input asp-for="ReceiverDetails!.FirstName" class="form-control" placeholder="First Name" />
+                                <span asp-validation-for="ReceiverDetails!.FirstName" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-4 mt-3 mb-2">
+                                <label class="text-black">Middle Name</label>
+                                <input asp-for="ReceiverDetails!.MiddleName" class="form-control" placeholder="Middle Name" />
+                            </div>
+
+                            <div class="col-md-4 mt-3 mb-2">
+                                <label class="text-black required">Last Name</label>
+                                <input asp-for="ReceiverDetails!.LastName" class="form-control" placeholder="Last Name" />
+                                <span asp-validation-for="ReceiverDetails!.LastName" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6 mt-3 mb-2">
+                                <label class="text-black required">Country</label>
+                                <select asp-for="ReceiverDetails!.Country" class="form-control item" rows="2" asp-items="@Model.countryList">
+                                    <option value="">Choose a Country</option>
+                                </select>
+                                <span asp-validation-for="ReceiverDetails!.Country" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6 mt-3 mb-2">
+                                <label class="text-black required">Address</label>
+                                <textarea asp-for="ReceiverDetails!.Address" class="form-control item" placeholder="Address" rows="1"></textarea>
+                                <span asp-validation-for="ReceiverDetails!.Address" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-2">
+                        <div class="row">
+                            <div class="col-md-12 mt-2">
+                                <center><h4 class="alert alert-secondary p-1">Bank Details</h4></center>
+                            </div>
+
+                            <div class="col-md-6 mt-3 mb-2">
+                                <label class="text-black required">Bank Name</label>
+                                <input asp-for="PaymentDetails!.Bank_Name" class="form-control item" placeholder="Bank Name" />
+                                <span asp-validation-for="PaymentDetails!.Bank_Name" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6 mt-3 mb-2">
+                                <label class="text-black required">Account Number</label>
+                                <input asp-for="PaymentDetails!.Account_Number" class="form-control item" placeholder="Account Number" />
+                                <span asp-validation-for="PaymentDetails!.Account_Number" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <center><button type="submit" class="btn btn-outline-success"><i class="bi bi-cash"></i> Transfer</button></center>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

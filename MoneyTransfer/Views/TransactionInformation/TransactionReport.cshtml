@@ -1,0 +1,96 @@
+﻿@model List<TransactionInformationDto>
+
+@{
+    ViewData["Title"] = "Transaction Report";
+}
+
+<div class="container" style="margin-top:100px">
+    <div class="card">
+        <div class="px-3 py-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <form asp-controller="TransactionInformation" asp-action="TransactionReport" method="post">
+                        <center> <h2>Transaction Report</h2></center>
+                        <div class="card px-4 py-1">
+                        <div class="row">
+                            
+                            <div class="col-md-3 col-sm-6">
+                                <label><b>From Date:</b></label>
+                                <input type="date" id="fromDate" name="fromDate" class="form-input" />
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <label><b>To Date:</b></label>
+                                <input type="date" id="toDate" name="toDate" class="form-input" />
+                            </div>
+
+                            <div class="col-md-2 col-sm-6 mt-4 mb-3">
+                                <button type="submit" onclick="search()" class="btn btn-outline-primary">Go</button>
+                            </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col overflow-scroll mt-3" style="max-height:600px;">
+                    @if (Model.Count > 0)
+                    {
+                        @foreach (var item in Model)
+                        {
+
+                            <span class="d-flex alert alert-danger  p-1" style="width:350px;">
+                                TransactionDate :&nbsp;<b>@(item.TransactionDate)</b>
+                            </span>
+
+                            <table class="table bg-light mb-3" id="table">
+                                <thead class="sticky-top bg-danger text-white">
+                                    <tr>
+                                        <th scope="col">Sender</th>
+                                        <th scope="col">Receiver</th>
+                                        <th scope="col">Payment Details</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="tbody">
+                                    <tr>
+                                        <td><b>First Name :</b> @item.SenderDetails.FirstName</td>
+                                        <td><b>First Name :</b> @item.ReceiverDetails.FirstName</td>
+                                        <td><b>Bank Name :</b> @item.PaymentDetails.Bank_Name</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Middle Name :</b> @(item.SenderDetails.MiddleName ?? "N/A")</td>
+                                        <td><b>Middle Name :</b> @(item.ReceiverDetails.MiddleName ?? "N/A")</td>
+                                        <td><b>Account Number :</b> @item.PaymentDetails.Account_Number</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Last Name :</b> @item.SenderDetails.LastName</td>
+                                        <td><b>Last Name :</b> @item.ReceiverDetails.LastName</td>
+                                        <td><b>Transfer Amount :</b> @(item.PaymentDetails.Transfer_Amount + " (" + item.PaymentDetails.Transfer_Currency_Type + ")")</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Country :</b> @item.SenderDetails.Country</td>
+                                        <td><b>Country :</b> @item.ReceiverDetails.Country</td>
+                                        <td><b>Exchange Rate :</b> @(item.PaymentDetails.Exchange_Rate)</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Address :</b> @item.SenderDetails.Address</td>
+                                        <td><b>Address :</b> @item.ReceiverDetails.Address</td>
+                                        <td><b>Payout Amount :</b> @(item.PaymentDetails.Payout_Amount + " (" + item.PaymentDetails.Payout_Currency_Type + ")")</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        }
+                    }
+                    else
+                    {
+                        <table class="alert alert-danger"><thead><tr><center>------------no any  record found---------------</center></tr></thead></table>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

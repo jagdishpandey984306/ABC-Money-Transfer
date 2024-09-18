@@ -1,0 +1,14 @@
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\bin\Debug\net8.0\MoneyTransfer.Data.deps.json
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\bin\Debug\net8.0\MoneyTransfer.Data.runtimeconfig.json
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\bin\Debug\net8.0\MoneyTransfer.Data.dll
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\bin\Debug\net8.0\MoneyTransfer.Data.pdb
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\obj\Debug\net8.0\MoneyTransfer.Data.csproj.AssemblyReference.cache
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\obj\Debug\net8.0\MoneyTransfer.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\obj\Debug\net8.0\MoneyTransfer.Data.AssemblyInfoInputs.cache
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\obj\Debug\net8.0\MoneyTransfer.Data.AssemblyInfo.cs
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\obj\Debug\net8.0\MoneyTransfer.Data.csproj.CoreCompileInputs.cache
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\obj\Debug\net8.0\MoneyTransfer.Data.dll
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\obj\Debug\net8.0\refint\MoneyTransfer.Data.dll
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\obj\Debug\net8.0\MoneyTransfer.Data.pdb
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\obj\Debug\net8.0\MoneyTransfer.Data.genruntimeconfig.cache
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.Data\obj\Debug\net8.0\ref\MoneyTransfer.Data.dll

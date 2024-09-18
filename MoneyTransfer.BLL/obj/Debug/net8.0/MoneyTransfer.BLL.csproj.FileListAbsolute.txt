@@ -1,0 +1,15 @@
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\bin\Debug\net8.0\MoneyTransfer.BLL.deps.json
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\bin\Debug\net8.0\MoneyTransfer.BLL.dll
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\bin\Debug\net8.0\MoneyTransfer.BLL.pdb
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\obj\Debug\net8.0\MoneyTransfer.BLL.csproj.AssemblyReference.cache
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\obj\Debug\net8.0\MoneyTransfer.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\obj\Debug\net8.0\MoneyTransfer.BLL.AssemblyInfoInputs.cache
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\obj\Debug\net8.0\MoneyTransfer.BLL.AssemblyInfo.cs
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\obj\Debug\net8.0\MoneyTransfer.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\obj\Debug\net8.0\MoneyTransfer.BLL.dll
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\obj\Debug\net8.0\refint\MoneyTransfer.BLL.dll
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\obj\Debug\net8.0\MoneyTransfer.BLL.pdb
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\obj\Debug\net8.0\ref\MoneyTransfer.BLL.dll
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\bin\Debug\net8.0\MoneyTransfer.Data.dll
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\bin\Debug\net8.0\MoneyTransfer.Data.pdb
+C:\Users\Jagdish Pandey\Desktop\MoneyTransfer\MoneyTransfer.BLL\obj\Debug\net8.0\MoneyTra.8005A6C1.Up2Date

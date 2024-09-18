@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MoneyTransfer.Presentation.props" />
+</Project>
